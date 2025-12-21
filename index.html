@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CIS Student and Faculty GitHub Accounts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+      background-color: #0D1117;
+    }
+
+    h1 {
+      text-align: center;
+      color: #555;
+    }
+
+    .actions {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .actions a {
+      display: inline-block;
+      padding: 10px 16px;
+      background-color: #24292e;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .actions a:hover {
+      background-color: #444;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 0px;
+    }
+
+    .note {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<h1>CIS Student and Faculty GitHub Accounts</h1>
+<p class="note">
+  The list below includes GitHub accounts that students and faculty have chosen to share. Students are encouraged to consider sharing their accounts as a way to showcase their work and explore how public repositories can support future internship or employment opportunities.
+</p>
+  
+<div class="actions">
+  <a href="https://github.com/jpowell-nsu/student-repos/issues/new?template=account_submission.yml">
+    Submit Your GitHub Account
+  </a>
+</div>
+
+<p class="note">
+  After submitting your account, it may take a short time to appear due to GitHub Pages caching. To remove or edit your account from the list, please email powellja@nsula.edu.
+</p>  
+
+<ul id="accountList">
+  <li>Loading accounts…</li>
+</ul>
+
+<script>
+const list = document.getElementById("accountList");
+fetch("accounts.json")
+  .then(r => r.json())
+  .then(data => {
+    list.innerHTML = "";
+
+    if (!data.accounts || data.accounts.length === 0) {
+      const li = document.createElement("li");
+      li.textContent = "No accounts approved yet.";
+      list.appendChild(li);
+      return;
+    }
+
+    // Sort alphabetically by name
+    data.accounts.sort((a, b) => a.name.localeCompare(b.name));
+
+    data.accounts.forEach(acc => {
+      const li = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = acc.url;
+      link.textContent = `${acc.name} (${acc.url.replace('https://github.com/', '')})`;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      li.appendChild(link);
+      list.appendChild(li);
+    });
+  })
+  .catch(err => {
+    list.innerHTML = "<li>Error loading accounts.</li>";
+    console.error(err);
+  });
+</script>
+  
+</body>
+</html>
