@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CIS Student and Faculty GitHub Accounts</title>
+  <title>New Course Doc</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
@@ -56,23 +56,23 @@
 </head>
 <body>
 
-<h1>CIS Student and Faculty GitHub Accounts</h1>
+<h1>New Course Doc</h1>
 <p class="note">
-  The list below includes GitHub accounts that students and faculty have chosen to share. Students are encouraged to consider sharing their accounts as a way to showcase their work and explore how public repositories can support future internship or employment opportunities.
+  The list below includes already submitted documents.
 </p>
   
 <div class="actions">
-  <a href="https://github.com/jpowell-nsu/student-repos/issues/new?template=account_submission.yml">
-    Submit Your GitHub Account
+  <a href="https://github.com/jpowell-nsu/course-docs/issues/new?template=document_submission.yml">
+    Submit a New Document
   </a>
 </div>
 
 <p class="note">
-  After submitting your account, it may take a short time to appear due to GitHub Pages caching. To remove or edit your account from the list, please email powellja@nsula.edu.
+  After submitting the document, it may take a short time to appear due to GitHub Pages caching.
 </p>  
 
 <ul id="documentList">
-  <li>Loading accounts…</li>
+  <li>Loading documents…</li>
 </ul>
 
 <script>
@@ -96,7 +96,7 @@ fetch("documents.json")
       const li = document.createElement("li");
       const link = document.createElement("a");
       link.href = acc.url;
-      link.textContent = `${acc.name} (${acc.url.replace('https://github.com/', '')})`;
+      link.textContent = `${acc.name} (${acc.url})`;
       link.target = "_blank";
       link.rel = "noopener noreferrer";
       li.appendChild(link);
@@ -104,7 +104,7 @@ fetch("documents.json")
     });
   })
   .catch(err => {
-    list.innerHTML = "<li>Error loading documents.</li>";
+    list.innerHTML = "<li>Error loading document list.</li>";
     console.error(err);
   });
 </script>
