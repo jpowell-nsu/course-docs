@@ -15,7 +15,7 @@ body:
   - type: input
     id: document_url
     attributes:
-      label: document URL
+      label: Document URL
       placeholder: document.html
     validations:
       required: true
