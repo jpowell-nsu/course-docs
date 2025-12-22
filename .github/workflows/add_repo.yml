@@ -1,11 +1,11 @@
-name: Add Approved GitHub Account
+name: Add Document
 
 on:
   issues:
     types: [labeled]
 
 jobs:
-  add-account:
+  add-document:
     if: github.event.label.name == 'approved'
     runs-on: ubuntu-latest
 
@@ -24,49 +24,49 @@ jobs:
           ISSUE_BODY=$(jq -r '.issue.body' "$GITHUB_EVENT_PATH")
           
           # Extract the first non-empty line as the name
-          NAME=$(echo "$ISSUE_BODY" | awk '/^### Your name$/ {getline; while($0 ~ /^$/) getline; print; exit}' | xargs)
+          NAME=$(echo "$ISSUE_BODY" | awk '/^### e.g., Office Hours$/ {getline; while($0 ~ /^$/) getline; print; exit}' | xargs)
           
           # Extract the first GitHub user URL
-          ACCOUNT_URL=$(echo "$ISSUE_BODY" | grep -Eo 'https://github\.com/[^[:space:]/]+/?' | head -n1)
+          DOCUMENT_URL=$(echo "$ISSUE_BODY" | awk '/^### e.g., officehours.html$/ {getline; while($0 ~ /^$/) getline; print; exit}' | xargs)
           
-          if [[ -z "$NAME" || -z "$ACCOUNT_URL" ]]; then
-            echo "Invalid submission. Name or GitHub URL missing."
+          if [[ -z "$NAME" || -z "$DOCUMENT_URL" ]]; then
+            echo "Invalid submission. Name or URL missing."
             exit 1
           fi
           
           echo "NAME=$NAME" >> $GITHUB_ENV
-          echo "ACCOUNT_URL=$ACCOUNT_URL" >> $GITHUB_ENV
+          echo "DOCUMENT_URL=$DOCUMENT_URL" >> $GITHUB_ENV
 
-      - name: Ensure accounts.json exists
+      - name: Ensure documents.json exists
         run: |
-          if [ ! -f accounts.json ]; then
-            echo '{"accounts":[]}' > accounts.json
+          if [ ! -f documents.json ]; then
+            echo '{"documents":[]}' > documents.json
           fi
 
-      - name: Add account to accounts.json
+      - name: Add document to documents.json
         run: |
-          # Skip if the account already exists
-          if jq -e --arg url "$ACCOUNT_URL" '.accounts[]? | select(.url == $url)' accounts.json >/dev/null; then
-            echo "Account already exists. Skipping."
+          # Skip if the document already exists
+          if jq -e --arg url "$DOCUMENT_URL" '.documents[]? | select(.url == $url)' documents.json >/dev/null; then
+            echo "Document already exists. Skipping."
             exit 0
           fi
 
-          # Append the account
-          jq --arg name "$NAME" --arg url "$ACCOUNT_URL" \
-            '.accounts += [{"name": $name, "url": $url}]' accounts.json > accounts.tmp.json
-          mv accounts.tmp.json accounts.json
+          # Append the document
+          jq --arg name "$NAME" --arg url "$DOCUMENT_URL" \
+            '.documents += [{"name": $name, "url": $url}]' documents.json > documents.tmp.json
+          mv documents.tmp.json documents.json
 
       - name: Commit and push changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add accounts.json
-          git commit -m "Add GitHub account: $ACCOUNT_URL" || echo "No changes to commit"
+          git add documents.json
+          git commit -m "Add document: $DOCUMENT_URL" || echo "No changes to commit"
           git push
 
       - name: Close issue using GitHub CLI
         run: |
           gh issue close ${{ github.event.issue.number }} \
-            --comment "✅ This GitHub account has been approved and added to the list. Thanks for submitting!"
+            --comment "✅ This document has been approved and added to the list. Thanks for submitting!"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
