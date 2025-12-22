@@ -24,7 +24,7 @@ jobs:
           ISSUE_BODY=$(jq -r '.issue.body' "$GITHUB_EVENT_PATH")
           
           # Extract the first non-empty line as the name
-          NAME=$(echo "$ISSUE_BODY" | awk '/^### e.g., Office Hours$/ {getline; while($0 ~ /^$/) getline; print; exit}' | xargs)
+          NAME=$(echo "$ISSUE_BODY" | awk '/^### Your name$/ {getline; while($0 ~ /^$/) getline; print; exit}' | xargs)
           
           # Read the URL
           DOCUMENT_URL=$(echo "$ISSUE_BODY" | awk '/^### Document URL$/ {getline; while($0 ~ /^$/) getline; print; exit}' | xargs)
