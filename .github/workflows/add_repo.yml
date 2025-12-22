@@ -26,10 +26,9 @@ jobs:
           # Extract the first non-empty line as the name
           NAME=$(echo "$ISSUE_BODY" | awk '/^### e.g., Office Hours$/ {getline; while($0 ~ /^$/) getline; print; exit}' | xargs)
           
-          # Extract the first GitHub user URL
-          DOCUMENT_URL=$(echo "$ISSUE_BODY" \
-            | grep -Eo 'https?://[^[:space:]]+' \
-            | head -n1)
+          # Read the URL
+          DOCUMENT_URL=$(echo "$ISSUE_BODY" | awk '/^### Document URL$/ {getline; while($0 ~ /^$/) getline; print; exit}' | xargs)
+            
           if [[ -z "$NAME" || -z "$DOCUMENT_URL" ]]; then
             echo "Invalid submission. Name or URL missing."
             exit 1
