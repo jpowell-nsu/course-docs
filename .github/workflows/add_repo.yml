@@ -29,10 +29,20 @@ jobs:
           # Read the URL
           DOCUMENT_URL=$(echo "$ISSUE_BODY" | awk '/^### Document URL$/ {getline; while($0 ~ /^$/) getline; print; exit}' | xargs)
             
-          if [[ -z "$NAME" || -z "$DOCUMENT_URL" ]]; then
-            echo "Invalid submission. Name or URL missing."
+          # if [[ -z "$NAME" || -z "$DOCUMENT_URL" ]]; then
+          #  echo "Invalid submission. Name or URL missing."
+          #  exit 1
+          # fi
+
+          if [[ -z "$NAME" ]]; then
+            echo "Invalid submission: name is missing."
             exit 1
           fi
+
+          if [[ -z "$DOCUMENT_URL" ]]; then
+            echo "Invalid submission: document URL is missing."
+            exit 1
+          fi          
           
           echo "NAME=$NAME" >> $GITHUB_ENV
           echo "DOCUMENT_URL=$DOCUMENT_URL" >> $GITHUB_ENV
