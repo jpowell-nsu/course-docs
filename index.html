@@ -87,7 +87,7 @@ fetch("documents.json")
       const li = document.createElement("li");
       const link = document.createElement("a");
       link.href = acc.url;
-      link.textContent = `${acc.name} (${acc.url})`;
+      link.textContent = `${acc.name}`;
       link.target = "_blank";
       link.rel = "noopener noreferrer";
       li.appendChild(link);
