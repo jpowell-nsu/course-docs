@@ -147,6 +147,10 @@
     {
       "name": "Xubuntu",
       "url": "https://mirror.us.leaseweb.net/ubuntu-cdimage/xubuntu/releases/22.04/release/"
+    },
+    {
+      "name": "The Odin Project",
+      "url": "https://www.theodinproject.com/"
     }
   ]
 }
