@@ -151,6 +151,14 @@
     {
       "name": "The Odin Project",
       "url": "https://www.theodinproject.com/"
+    },
+    {
+      "name": "Git Commit (Git Commit Message Convention Guide)",
+      "url": "https://dev.to/dev__insights/a-developers-guide-to-conventional-commits-3p70"
+    },
+    {
+      "name": "Git Commits (Best Practices for Git Commit, See Section 3)",
+      "url": "https://www.baeldung.com/ops/git-commit-messages"
     }
   ]
 }
