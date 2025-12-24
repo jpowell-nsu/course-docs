@@ -171,6 +171,14 @@
     {
       "name": "Eclipse - Adding a Library",
       "url": "https://codingtechroom.com/question/add-library-eclipse"
+    },
+    {
+      "name": "Git - Install",
+      "url": "https://git-scm.com/install/"
+    },
+    {
+      "name": "Neovim",
+      "url": "https://neovim.io/"
     }
   ]
 }
