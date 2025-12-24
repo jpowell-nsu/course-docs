@@ -159,6 +159,10 @@
     {
       "name": "Git Commits (Best Practices for Git Commit, See Section 3)",
       "url": "https://www.baeldung.com/ops/git-commit-messages"
+    },
+    {
+      "name": "JAVA JDK (21 or later, 25 preferred)",
+      "url": "https://www.oracle.com/java/technologies/downloads/"
     }
   ]
 }
