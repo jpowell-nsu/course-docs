@@ -171,6 +171,10 @@
     {
       "name": "Eclipse - Importing a Project and Setting the Execution Environment",
       "url": "https://www.instructables.com/How-to-Import-Java-Projects-Into-Eclipse-for-Begin/"
+    },
+    {
+      "name": "Eclipse - Adding a Library",
+      "url": "https://codingtechroom.com/question/add-library-eclipse"
     }
   ]
 }
