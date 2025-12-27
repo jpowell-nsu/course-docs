@@ -74,7 +74,7 @@
     },
     {
       "name": "MySQL (select the lastest 8.0 version)",
-      "url": "https://dev.mysql.com/downloads/mysql/"
+      "url": "https://dev.mysql.com/downloads/installer/"
     },
     {
       "name": "MySQL Connector/J",
