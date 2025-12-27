@@ -73,12 +73,16 @@
       "url": "https://mariadb.org/"
     },
     {
-      "name": "MySQL (select the lastest 8.0 version)",
-      "url": "https://dev.mysql.com/downloads/installer/"
+      "name": "MySQL (select the 8.4.7 LTS version)",
+      "url": "https://dev.mysql.com/downloads/mysql/"
     },
     {
       "name": "MySQL Connector/J",
       "url": "https://dev.mysql.com/downloads/connector/j/"
+    },
+    {
+      "name": "MySQL Workbench",
+      "url": "https://dev.mysql.com/downloads/workbench/"
     },
     {
       "name": "MySQL Workbench Dracula Theme",
