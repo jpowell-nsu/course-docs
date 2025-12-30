@@ -191,6 +191,10 @@
     {
       "name": "Neovim",
       "url": "https://neovim.io/"
+    },
+    {
+      "name": "OBS Studio",
+      "url": "https://obsproject.com/"
     }
   ]
 }
