@@ -195,6 +195,14 @@
     {
       "name": "OBS Studio",
       "url": "https://obsproject.com/"
+    },
+    {
+      "name": "SQL Server Express Linux Install",
+      "url": "https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-overview?view=sql-server-ver16&culture=en-us&country=us"
+    },
+    {
+      "name": "SQL Server Express Docker Install (for macOS)",
+      "url": "https://www.geeksforgeeks.org/installation-guide/how-to-install-sql-server-on-macos/"
     }
   ]
 }
