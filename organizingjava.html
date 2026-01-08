@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset="UTF-8">
+<title>Organizing a Java Project for Submission</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+body {
+	font-family: Arial, sans-serif;
+	max-width: 800px;
+	margin: 40px auto;
+	padding: 0 20px;
+	line-height: 1.6;
+	background-color: #0D1117;
+	color: #AAA;
+}
+
+h1 {
+	text-align: center;
+	color: #AAA;
+}
+
+.actions {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.actions a {
+	display: inline-block;
+	padding: 10px 16px;
+	background-color: #24292e;
+	color: white;
+	text-decoration: none;
+	border-radius: 4px;
+}
+
+.actions a:hover {
+	background-color: #444;
+}
+
+ul {
+	padding-left: 20px;
+}
+
+li {
+	margin-bottom: 0px;
+}
+
+.note {
+	margin-top: 40px;
+	font-size: 0.9em;
+	color: #AAA;
+}
+
+	.center {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	table, th, td {
+	  padding-top: 1px;
+	  padding-bottom: 1px;
+	  padding-left: 10px;
+	  padding-right: 10px;
+	  border: 0px;
+	}
+	
+</style>
+</head>
+<body>
+	<main>
+		<header>
+			<h1>Organizing a Java Project for Submission</h1>
+		</header>
+		<section>
+			<p>TIn this course, unless otherwise specified, I do not care which IDE 
+				you use to code your Java project (Eclipse, VS Code, Neovim, Emacs,
+				or even just a text editor). However, all projects must be organized
+				similarly to an Eclipse project. For example:</p>
+<section>
+<table class="center">
+<tr>
+<th>Eclipse</th>
+<th>File System</th>
+</tr>
+<tr>
+<td><img src="eclipseproject.png" alt="Image of a Project in Eclipse"></td>
+<td><img src="eclipseprojectfiles.png" alt="Image of an Eclipse Project in the file system."></td>
+</tr>
+</table>
+</section>
+
+			<p>Project folder – this folder must be named according to any
+				instructions, e.g., lastlabw01</p>
+			<p>src folder – all source code files must be in the package 
+				subfolders of this subfolder</p>
+			<p>package – the package is really just a subfolder in the file
+				system, like driver and vehicles</p>	
+			<p>source files – all your source code files for that package,
+				like Driver.java</p>										
+<ul>
+<li>You do not need to submit the bin folder; I will compile your source code. It is okay to include it, but it is unnecessary.</li> 
+<li>No need to include the settings folder, but it is fine if you do.</li>
+<li>Include a lib folder if external libraries are used, varying by assignment.</li>
+<li>Committing an Eclipse project with Git usually includes everything needed, but other IDEs may require setup.</li>
+</ul>			
+<br><br>
+		</section>
+	</main>
+</body>
+</html>
