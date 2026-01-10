@@ -203,6 +203,10 @@
     {
       "name": "SQL Server Express Docker Install (for macOS)",
       "url": "https://www.geeksforgeeks.org/installation-guide/how-to-install-sql-server-on-macos/"
+    },
+    {
+      "name": "Dark Reader FireFox Add-On",
+      "url": "https://addons.mozilla.org/en-US/firefox/addon/darkreader/"
     }
   ]
 }
