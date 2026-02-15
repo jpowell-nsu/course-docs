@@ -207,6 +207,10 @@
     {
       "name": "Dark Reader FireFox Add-On",
       "url": "https://addons.mozilla.org/en-US/firefox/addon/darkreader/"
+    },
+    {
+      "name": "Local Variable Type Inference (Using var in Java)",
+      "url": "https://openjdk.org/projects/amber/guides/lvti-style-guide"
     }
   ]
 }
