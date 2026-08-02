@@ -13,11 +13,12 @@
       padding: 0 20px;
       line-height: 1.6;
       background-color: #0D1117;
+      color: #AAAAAA;
     }
 
     h1 {
       text-align: center;
-      color: #555;
+      color: #AAAAAA;
     }
 
     ul {
@@ -38,14 +39,26 @@
       text-decoration: underline;
     }
 
+    a:focus-visible {
+      outline: 2px solid #58a6ff;
+      outline-offset: 2px;
+    }
+
+    #resourceList a::after {
+      content: " (opens in new tab)";
+      font-size: 0.85em;
+      color: #8b949e;
+    }
+
     .note {
       margin-bottom: 30px;
       font-size: 0.95em;
-      color: #555;
+      color: #999999;
     }
   </style>
 </head>
 <body>
+<main>
 
 <h1>Resource Websites</h1>
 
@@ -56,6 +69,8 @@
 <ul id="resourceList">
   <li>Loading document list…</li>
 </ul>
+
+</main>
 
 <script>
 const list = document.getElementById("resourceList");
@@ -90,6 +105,6 @@ fetch("resources.json")
     console.error(err);
   });
 </script>
-  
+
 </body>
 </html>
