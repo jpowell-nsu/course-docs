@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 
 <head>
-<meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Program Development Tips</title>
   <style>
     body {
@@ -14,44 +13,28 @@
       padding: 0 20px;
       line-height: 1.6;
       background-color: #0D1117;
-	  color: #AAA;
+      color: #AAAAAA;
     }
 
     h1 {
       text-align: center;
-      color: #AAA;
+      color: #AAAAAA;
     }
 
-    .actions {
-      text-align: center;
-      margin-bottom: 30px;
+    h2 {
+      color: #AAAAAA;
+      font-size: 1.3em;
+      margin-top: 40px;
+      border-bottom: 1px solid #333333;
+      padding-bottom: 6px;
     }
 
-    .actions a {
-      display: inline-block;
-      padding: 10px 16px;
-      background-color: #24292e;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-    }
-
-    .actions a:hover {
-      background-color: #444;
-    }
-
-    ol {
+    ol, ul {
       padding-left: 20px;
     }
 
     li {
-      margin-bottom: 0px;
-    }
-
-    .note {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #555;
+      margin-bottom: 10px;
     }
   </style>
 </head>
@@ -59,8 +42,27 @@
 <body>
 <main>
 <h1>Program Development Tips</h1>
-<p>The procedures below provide general program design and development information using a typical academic environment approach. These instructions assume you use Java with an appropriate IDE or UNIX/Linux/Mac command line; however, most of these are adjustable to any language outside this course.</p>
-<ol><li>Read the assigned problem statement and problem specification. These represent the exercise requirements with sufficient detail to indicate the problem to be solved (i.e., what you want to do) without specifying the solution (i.e., how to do it). It may require you to interpret the problem and decide how to approach it. In some cases, reasonable assumptions may be necessary. It is good to check with the instructor if your assumption is correct, but that is not always possible, so you should explicitly state it in your documentation. Plan to spend several days working on the problem, not just the due date.</li><li>Identify the inputs and outputs of the problem. Although dangerous, you can create a skeleton program to read the data and write it out unchanged. It is risky because you have not yet designed a solution, and a skeleton program tempts you to continue coding rather than solve the problem first. Prepare sample data, or review the data supplied with the programming assignment. Study any examples provided to understand how the program transforms data.</li><li>Design a solution to the problem and pseudocode/flowchart the design. Keep your mind to modularization using objects and methods/functions. You should provide an overview of functions and interactions, clearly identify the chosen data structures, and include individual module outlines in your documentation.</li><li>Hand-trace some example data with your solution to see if you have a correct solution and have resolved as many issues as possible. If you are building your program incrementally, you should handle the significant cases first and then the error conditions.</li><li>Prepare the program implementation using appropriate implementation techniques. Make sure you include the required documentation. Then execute the program for the indicated data sets (if there are no data sets, create your test data, but note that instructor-graded data may differ). Test with data extremes, minimums, and maximums; for example, if you must sort an array, run your sort on already sorted data and run it against the minimum- and maximum-size arrays.</li><li>Check (verify) your results with the actual data provided. It often requires writing the results next to the original data and comparing them with your hand traces. Iterate steps 0-5 to obtain a complete, correctly working program on the target machine specified in class.</li><li>Answer any required questions and perform any requested analysis using the results obtained in steps 4 and 5. You may need to run the program multiple times and use several data sets to complete the necessary analysis. Sometimes it may take time to run it on a dataset, so plan accordingly.</li><li>Make sure you test your program by compiling and running it using the same software the grader will use. In our case, it will be Eclipse. Java should compile the same way in any IDE and run on any machine; however, you should check it because there are no guarantees.</li><li>Submit your program and all necessary files as instructed. Ensure that all files are available for grading. It does not mean to ask the instructor if you have correctly submitted the assignment—that’s your job, and you can accomplish this by looking at what you submitted.</li></ol>
+
+<p>The following steps outline a general approach to designing and developing a program for this course. They assume you are using Java with an IDE or a UNIX, Linux, or Mac command line, but most steps apply to any language.</p>
+
+<h2>Before You Begin</h2>
+<ul>
+<li>Use version control, such as Git, and back up your work regularly. A lost or corrupted file should not cost you your progress.</li>
+<li>If you get stuck or are unsure how to proceed, ask for help early, through office hours, a teaching assistant, or the course discussion forum. Do not wait until the deadline.</li>
+</ul>
+
+<h2>Development Process</h2>
+<ol>
+<li>Read the problem statement and specification carefully, and start early rather than waiting until the due date. If you need to make an assumption to move forward, confirm it with the instructor when possible, and document your assumption either way.</li>
+<li>Identify the required inputs and outputs. Review any sample data or examples provided so you understand how the program should transform the data. Avoid writing a skeleton input and output program before you have designed a solution, since it can tempt you to start coding before you have actually solved the problem.</li>
+<li>Design your solution before you write any code. Create pseudocode or a flowchart, break the solution into objects and functions, and decide on your data structures. Include this design overview in your documentation.</li>
+<li>Hand-trace your design using sample data to check its logic and catch errors before you begin coding.</li>
+<li>Implement your program using clear, consistent comments and formatting, and include any required documentation. Test it against the provided data sets, or create your own if none are given, and be sure to test edge cases such as minimum and maximum sizes. Compare your output to the expected results, and repeat the design, trace, and test cycle until the program works correctly.</li>
+<li>Complete any required analysis or written questions using your test results. You may need to run the program several times with different data sets, and some runs may take a while, so plan your time accordingly.</li>
+<li>Confirm that your program compiles and runs using the same software the grader will use, which is Eclipse for this course. Standard Java should behave the same across environments, but check anyway since this is not guaranteed.</li>
+<li>Submit your program and all required files as instructed. Verify the submission yourself by checking what you actually submitted, rather than asking the instructor to confirm it for you.</li>
+</ol>
+
 </main>
 </body>
 </html>
