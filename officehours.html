@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Office Hours</title>
@@ -13,136 +13,134 @@
       padding: 0 20px;
       line-height: 1.6;
       background-color: #0D1117;
-	  color: #AAA;
+      color: #AAAAAA;
     }
 
     h1 {
       text-align: center;
-      color: #AAA;
+      color: #AAAAAA;
     }
 
-    .actions {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .actions a {
-      display: inline-block;
-      padding: 10px 16px;
-      background-color: #24292e;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-    }
-
-    .actions a:hover {
-      background-color: #444;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 0px;
-    }
-
-    .note {
+    h2 {
+      color: #AAAAAA;
+      font-size: 1.3em;
       margin-top: 40px;
-      font-size: 0.9em;
-      color: #AAA;
+      border-bottom: 1px solid #333333;
+      padding-bottom: 6px;
     }
-	
-	th {
-		text-align: left;
-	}
-	
-	.center {
-		margin-left: auto;
-		margin-right: auto;
-	}
-	
-	th, td {
-	  padding-top: 1px;
-	  padding-bottom: 1px;
-	  padding-left: 10px;
-	  padding-right: 10px;
-	}
-	
 
-	/* Center the image + info block */
-	.profile {
-		display: flex;
-		justify-content: center;   /* centers horizontally */
-		align-items: center;       /* aligns image/text vertically */
-		gap: 1.5rem;
-		text-align: center;        /* centers text in the info block */
-		margin: 1.5rem 0 2rem;
-	}
-		.profile__img {
-		width: 140px;              /* tweak size as needed */
-		height: auto;
-		border-radius: 8px;        /* optional */
-	}
-	.profile__name {
-		margin: 0 0 0.25rem;
-		font-size: 1.25rem;
-		font-weight: 600;
-	}
+    a {
+      color: #2DD4BF;
+      text-decoration: underline;
+    }
 
+    a:hover {
+      color: #5EEAD4;
+    }
+
+    a:focus-visible {
+      outline: 2px solid #2DD4BF;
+      outline-offset: 2px;
+    }
+
+    address {
+      font-style: normal;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    caption {
+      text-align: left;
+      margin-bottom: 10px;
+      font-size: 0.95em;
+    }
+
+    th {
+      text-align: left;
+    }
+
+    th, td {
+      padding: 8px 10px;
+      border-bottom: 1px solid #333333;
+    }
+
+    .profile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      text-align: center;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .profile__img {
+      width: 140px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .profile__name {
+      margin: 0 0 0.25rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
   </style>
 </head>
 <body>
 <main>
-<header><h1>Office Hours</h1></header>
+  <h1>Office Hours</h1>
 
-<section class="profile">
-  <img src="dr-zoidberg.jpg" alt="Instructor" class="profile__img" />
-  <div class="profile__info">
-    <h2 class="profile__name">Jason W. Powell, Ph.D.</h2>
-    314 Russell Hall<br>
-    <a href="mailto:powellja@nsula.edu">powellja@nsula.edu</a><br>
-    318.357.5751<br>
-    Spring 2026
-  </div>
-</section>
+  <section class="profile">
+    <img src="dr-zoidberg.jpg" alt="Illustration of the cartoon character Dr. Zoidberg from Futurama, used in place of a photo" class="profile__img">
+    <div class="profile__info">
+      <h2 class="profile__name">Jason W. Powell, Ph.D.</h2>
+      <address>
+        314 Russell Hall<br>
+        <a href="mailto:powellja@nsula.edu">powellja@nsula.edu</a><br>
+        318.357.5751<br>
+        Fall 2026
+      </address>
+    </div>
+  </section>
 
-<section>
-<table class="center" border="0">
-<tr>
-<th>Day</th>
-<th>Hours</th>
-<th>Location</th>
-</tr>
-<tr>
-<td>Mon</td>
-<td>09:00 am – 11:00 am </td>
-<td>(FLAME) 104 Russell Hall</td>
-</tr>
-<tr>
-<td>Tue</td>
-<td>10:00 am – 02:00 pm</td>
-<td>314 or 104 Russell Hall, or Teams</td>
-</tr>
-<tr>
-<td>Wed</td>
-<td>Appointments Only</td>
-<td></td>
-</tr>
-<tr>
-<td>Thu</td>
-<td>10:00 am – 02:00 pm</td>
-<td>314 or 104 Russell Hall, or Teams</td>
-</tr>
+  <h2>Weekly Schedule</h2>
+  <table>
+    <caption>Days, hours, and location for office hours</caption>
+    <tr>
+      <th scope="col">Day</th>
+      <th scope="col">Hours</th>
+      <th scope="col">Location</th>
+    </tr>
+    <tr>
+      <td>Mon</td>
+      <td>11:00 am – 12:00 pm, 2:00 pm – 4:00 pm</td>
+      <!-- FLAME designation may be added here later -->
+      <td>Russell Hall 314 or 104, or Teams</td>
+    </tr>
+    <tr>
+      <td>Tue</td>
+      <td>9:00 am – 12:30 pm</td>
+      <td>Russell Hall 314 or 104, or Teams</td>
+    </tr>
+    <tr>
+      <td>Wed</td>
+      <td colspan="2">Appointments only</td>
+    </tr>
+    <tr>
+      <td>Thu</td>
+      <td>9:00 am – 12:30 pm</td>
+      <td>Russell Hall 314 or 104, or Teams</td>
+    </tr>
+    <tr>
+      <td>Fri</td>
+      <td colspan="2">Appointments only</td>
+    </tr>
+  </table>
 
-<tr>
-<td>Fri</td>
-<td>Appointments Only</td>
-<td></td>
-</tr>
-</table>
-
-</section>
 </main>
 </body>
 </html>
